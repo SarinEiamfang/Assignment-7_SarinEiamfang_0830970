@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+	WEB301 Assignment 7
+    Creating a Three-Part Form with Swiper and Validation
+	Filename: swiperform.html
+	
+	Author: Sarin Eiamfang 0830970
+	Date:   2023-11-07
+-->
+
+<head>
+    <title>Three-Part Form with Swiper and Validation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="swiperformstyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    <!-- validation function -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Sarin Eiamfang</h1>
+    </header>
+
+    <main>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+<!--Slide 1 -->
+                <div class="swiper-slide">
+                <form id="schoolForm" action="#" method="post">
+                    <Legend>School Information</legend>
+                        <div class="box">
+                            <label for="school">Name of School :</label>
+                            <input type="text" id="school" name="school" required>
+                        </div>
+                        <div class="box">
+                            <label for="name">Date of Joining :</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div>
+                            <label id="graduated">Graduated :</label>
+                            <ul>
+                                <li> 
+                                    <input type="radio" id="yGraduated" name="graduated" value="yes" />
+                                    <label for="yGraduated">Yes</label>
+                                </li>
+                                <li> 
+                                    <input type="radio" id="nGraduated" name="graduated" value="no"/>
+                                    <label for="nGraduated">No</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <input type="submit" name="submit" value="Submit"/>
+                        </div>
+                </form>
+                </div>
+
+<!--Slide 2 -->
+                <div class="swiper-slide">
+                <form id="personalForm" action="#" method="post">
+                    <Legend>Personal Information</legend>
+                        <div class="box">
+                            <label for="email">Email :</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="box">
+                            <label for="phone">Phone Number :</label>
+                            <input type="tel" id="phone" name="phone" pattern="^(?:\+?1\s?)?(?:\(\d{3}\)|\d{3})[-.\s]?\d{3}[-.\s]?\d{4}$"
+                            placeholder="123-456-7890" oninvalid="this.setCustomValidity('Please enter a valid Canada phone number (e.g., 123-456-7890)')"
+                            oninput="this.setCustomValidity('')">
+                        </div>
+                        <div class="box">
+                            <label for="postalCode">Postal Code :</label>
+                            <input type="text" id="postalCode" name="postalCode" pattern="^[ABCEGHJ-NPRSTVXY][0-9][ABCEGHJ-NPRSTV-Z][ ]?[0-9][ABCEGHJ-NPRSTV-Z][0-9]$"
+                            placeholder="ANA NAN" oninvalid="this.setCustomValidity('Please enter a valid Canada postal code (e.g., A1A 1A1)')"
+                            oninput="this.setCustomValidity('')">
+                        </div>
+                        <div>
+                            <input type="submit" name="submit" value="Submit"/>
+                        </div>
+                </form>
+                </div>
+
+<!--Slide 3 -->
+                <div class="swiper-slide">
+                <form id="paymentForm" action="#" method="post">
+                    <Legend>Payment Information</legend>
+                        <div class="box">
+                            <label for="creditCard">Credit Card Number :</label>
+                            <input type="text" id="creditCard" name="creditCard" pattern="^\d{10}$"
+                            placeholder="123-456-7890" oninvalid="this.setCustomValidity('Credit card must be a 10-digit number')"
+                            oninput="this.setCustomValidity('')">
+                        </div>
+                        <div class="box">
+                            <label for="expDate">Expiration Date :</label>
+                            <input type="date" id="expDate" name="expDate" required>
+                        </div>
+                        <div class="box">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" pattern="^\d{3}$"
+                            placeholder="123" oninvalid="this.setCustomValidity('CVV must be a 3-digit number')"
+                            oninput="this.setCustomValidity('')">
+                        </div>
+
+                        <div>
+                            <input type="submit" name="submit" value="Submit"/>
+                        </div>
+                </form>
+                </div>         
+        </div>
+
+<!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 by Sarin Eiamfang</p>
+    </footer>
+
+<!-- Swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="form.js"></script>
+    <script src="swiper.js"></script>
+        
+</body>
+</html>

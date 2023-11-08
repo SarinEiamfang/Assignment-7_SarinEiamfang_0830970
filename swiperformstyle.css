@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+/****************
+	WEB301 Assignment 7
+    Creating a Three-Part Form with Swiper and Validation
+	Filename: swiperformstyle.css
+	
+	Author: Sarin Eiamfang 0830970
+	Date:   2023-11-07
+
+****************/
+
+/****************************  MAIN STYLES - DESKTOP AND TABLET  ***********************************/
+
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #A1E1FA;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #74BDE0;
+    padding: 30px 50px 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.box {
+    display: flex;
+    align-items: center; 
+
+}
+
+label {
+    width: 400px; 
+    font-weight: bold;
+    text-align: left; 
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+ul {
+    text-align: center; 
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: 'Cinzel', serif;
+}
+
+
+input[type="text"]:invalid,
+input[type="date"]:invalid,
+input[type="email"]:invalid,
+input[type="tel"]:invalid {
+    border-color: red;
+}
+
+
+input[type="text"]:valid,
+input[type="date"]:valid,
+input[type="email"]:valid,
+input[type="tel"]:valid {
+    border-color: green;
+}
+
+ul {
+	list-style-type: none;
+}
+
+
+input[type="submit"]{
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+}
+
+input[type="submit"]:hover{
+    background-color: #0056b3;
+}
+
+footer p {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+/****************************  MEDIA STYLES - MOBILE  ***********************************/
+
+@media screen and (max-width: 600px)
+{
+   
+	body {
+        background-color: #4A8DE7;
+        color: #7eff00;
+    }
+    
+    form {
+        background-color: #3B7197;
+        font-size: 1.2em;
+    }
+
+	legend {
+        font-size: 1.2em;
+	}
+
+	.box {
+		display: grid;
+
+	}
+
+    label {
+		font-size: 1.2em;
+		width: auto; 
+		text-align: left; 
+		margin-right: 0; 
+	}
+
+    ul {
+        text-align: left; 
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        display: grid;
+		grid-gap: 5px;
+		margin-right: 30px;
+        align-items: center;
+		height: 3em;
+		font-size: 1em;
+	}
+
+
+
+}
+  
